@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariane Lesnyak | Portuguese AI Response Evaluation Expert</title>
+    <meta name="description" content="Portfolio of Ariane Lesnyak. Language expertise. Evidence-based evaluation. Better AI responses.">
+    
+    <!-- Fontes Geist (OpenTrain) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+           DESIGN TOKENS (Extraídos do OpenTrain - Dark Mode)
+           ============================================================ */
+        :root {
+            --color-background: oklch(18% 0 0);
+            --color-foreground: oklch(99% 0 0);
+            --color-card: oklch(5% 0 0);
+            --color-card-foreground: oklch(99% 0 0);
+            --color-primary: oklch(99% 0 0);
+            --color-primary-foreground: oklch(9% 0 0);
+            --color-secondary: oklch(51.8% 0.2326 269);
+            --color-secondary-foreground: oklch(99% 0 0);
+            --color-muted: oklch(20% 0 0);
+            --color-muted-foreground: oklch(60% 0 0);
+            --color-border: oklch(37% 0 0);
+            --color-success: oklch(76.5% 0.177 163.223);
+            --color-warning: oklch(82.8% 0.189 84.429);
+            --color-error: oklch(70.4% 0.191 22.216);
+
+            --font-heading: 'Geist', 'Geist Fallback', Arial, sans-serif;
+            --font-body: 'Geist', 'Geist Fallback', Arial, sans-serif;
+            --font-mono: 'Geist Mono', monospace;
+
+            --container-width: 1400px;
+            --section-spacing: 6rem;
+            --card-radius: 0.625rem;
+            --button-radius: 0.375rem;
+            --transition-fast: 0.15s ease;
+            --transition-standard: 0.2s ease;
+        }
+
+        /* ============================================================
+           RESET & BASE
+           ============================================================ */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-background);
+            color: var(--color-foreground);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* ============================================================
+           COMPONENTES
+           ============================================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.875rem;
+            border-radius: var(--button-radius);
+            transition: all var(--transition-standard);
+            cursor: pointer;
+            border: 1px solid transparent;
+            line-height: 1.2;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-primary-foreground);
+            border-color: var(--color-primary);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            color: var(--color-primary-foreground);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-foreground);
+            border-color: var(--color-border);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-muted);
+            border-color: var(--color-muted-foreground);
+            color: var(--color-foreground);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border-radius: 9999px;
+            background-color: var(--color-muted);
+            color: var(--color-muted-foreground);
+            border: 1px solid var(--color-border);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-outline {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.35rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border-radius: 9999px;
+            background-color: transparent;
+            color: var(--color-foreground);
+            border: 1px solid var(--color-foreground);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--color-muted-foreground);
+            max-width: 650px;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+
+        /* ============================================================
+           NAVBAR COM POP-UPS
+           ============================================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-border);
+            height: 69px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .wordmark {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-right: 1rem;
+        }
+
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .nav-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: var(--button-radius);
+            transition: color var(--transition-fast);
+        }
+
+        .nav-item:hover {
+            color: var(--color-muted-foreground);
+        }
+
+        .nav-item svg {
+            width: 14px;
+            height: 14px;
+            transition: transform var(--transition-fast);
+        }
+
+        .nav-item:hover svg {
+            transform: rotate(180deg);
+        }
+
+        /* Pop-up */
+        .nav-popup {
+            display: none;
+            position: fixed;
+            top: 69px;
+            left: 0;
+            width: 75vw;
+            max-height: calc(100vh - 69px);
+            overflow-y: auto;
+            background-color: #000000;
+            border: 1px solid var(--color-border);
+            border-top: none;
+            z-index: 999;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .nav-popup.active {
+            display: block;
+        }
+
+        .nav-popup-header {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--color-muted-foreground);
+            margin-bottom: 2rem;
+        }
+
+        .popup-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .popup-item .icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            color: var(--color-muted-foreground);
+        }
+
+        .popup-item .text h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.25rem;
+        }
+
+        .popup-item .text p {
+            font-size: 0.875rem;
+            color: var(--color-muted-foreground);
+            margin: 0;
+        }
+
+        .nav-cta {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            display: flex;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--color-foreground);
+            margin-left: auto;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+            .nav-cta {
+                display: inline-flex;
+                margin-left: auto;
+            }
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+
+        /* ============================================================
+           HERO (Com Fundo Preto, Formas Geográficas e Borda Animada)
+           ============================================================ */
+        .hero {
+            position: relative;
+            padding-top: 140px;
+            padding-bottom: 6rem;
+            border-bottom: 1px solid var(--color-border);
+            overflow: hidden;
+            background-color: #000000;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Fundo Geográfico à Direita */
+        .hero-bg-geo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.1;
+            background-image: 
+                radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(255,255,255,0.05) 0%, transparent 40%),
+                linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.02) 45%, transparent 50%);
+            background-size: cover;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Borda Animada (Corrente Azul) */
+        .hero-badge-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            padding: 2px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .hero-badge-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150%;
+            height: 150%;
+            background: conic-gradient(
+                from 0deg,
+                transparent 0deg,
+                transparent 340deg,
+                var(--color-secondary) 350deg,
+                transparent 360deg
+            );
+            transform: translate(-50%, -50%);
+            animation: rotateBorder 3s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes rotateBorder {
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .hero-badge {
+            position: relative;
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border-radius: 2px;
+            background-color: #000000;
+            color: var(--color-muted-foreground);
+            border: 1px solid var(--color-border);
+            text-transform: none;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-badge svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--color-muted-foreground);
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* ============================================================
+           CAPABILITIES (4 Colunas, Tabela)
+           ============================================================ */
+        .capabilities {
+            padding: var(--section-spacing) 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .capabilities-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .capabilities-header .nav-arrows {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            background-color: #ffffff;
+            color: #000000;
+            border-radius: 4px;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .capabilities-table {
+            display: grid;
+            grid-template-columns: 1fr;
+            border: 1px solid var(--color-border);
+            border-top: none;
+            border-radius: 0 0 var(--card-radius) var(--card-radius);
+            overflow: hidden;
+        }
+
+        .capability-cell {
+            padding: 2rem 1.5rem;
+            border-right: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            background-color: var(--color-card);
+        }
+
+        .capability-cell:last-child {
+            border-right: none;
+        }
+
+        .capability-cell h3 {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--color-foreground);
+        }
+
+        .capability-cell p {
+            font-size: 0.875rem;
+            color: var(--color-muted-foreground);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (min-width: 768px) {
+            .capabilities-table {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .capability-cell {
+                border-bottom: none;
+            }
+        }
+
+        /* ============================================================
+           WORKING PRINCIPLES (Tabela 2x2)
+           ============================================================ */
+        .principles {
+            padding: var(--section-spacing) 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            border: 1px solid var(--color-border);
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .principle-cell {
+            padding: 2rem;
+            border-bottom: 1px solid var(--color-border);
+            border-right: 1px solid var(--color-border);
+            background-color: var(--color-card);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .principle-cell:nth-child(2n) {
+            border-right: none;
+        }
+
+        .principle-cell:nth-last-child(-n+2) {
+            border-bottom: none;
+        }
+
+        .principle-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-muted-foreground);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .principle-header svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .principle-cell h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-foreground);
+            margin: 0;
+        }
+
+        .principle-cell p {
+            font-size: 0.875rem;
+            color: var(--color-muted-foreground);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .principle-visual {
+            margin-top: 1rem;
+            height: 60px;
+            background-color: var(--color-muted);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animações simples para os princípios */
+        .principle-visual .anim-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--color-secondary);
+            border-radius: 50%;
+            animation: pulseDot 2s infinite;
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+        }
+
+        .principle-visual .anim-line {
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-secondary);
+            animation: slideLine 2s infinite;
+        }
+
+        @keyframes slideLine {
+            0% { transform: translateX(-20px); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(20px); opacity: 0; }
+        }
+
+        .principle-visual .anim-type {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--color-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid var(--color-secondary);
+            animation: typing 3s steps(30) infinite, blink 0.75s step-end infinite;
+            width: 0;
+        }
+
+        @keyframes typing {
+            0% { width: 0; }
+            50% { width: 100%; }
+            100% { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        @media (min-width: 768px) {
+            .principles-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ============================================================
+           HOW I EVALUATE A RESPONSE (6 Blocos, 3 em cima, 3 embaixo)
+           ============================================================ */
+        .framework {
+            padding: var(--section-spacing) 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .framework-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .framework-card {
+            border: 1px solid var(--color-border);
+            border-radius: var(--card-radius);
+            padding: 1.5rem;
+            background-color: var(--color-card);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: transform var(--transition-standard), box-shadow var(--transition-standard);
+        }
+
+        .framework-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+
+        .framework-animation {
+            height: 80px;
+            background-color: var(--color-muted);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animações variadas para cada card */
+        .anim-1 .bar {
+            width: 10px;
+            height: 40px;
+            background-color: var(--color-success);
+            margin: 0 4px;
+            animation: barGrow 1.5s infinite alternate;
+        }
+        .anim-1 .bar:nth-child(2) { animation-delay: 0.2s; background-color: var(--color-warning); }
+        .anim-1 .bar:nth-child(3) { animation-delay: 0.4s; background-color: var(--color-error); }
+
+        @keyframes barGrow {
+            from { transform: scaleY(0.3); }
+            to { transform: scaleY(1); }
+        }
+
+        .anim-2 .circle {
+            width: 30px;
+            height: 30px;
+            border: 3px solid var(--color-secondary);
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .anim-3 .dot-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+        .anim-3 .dot-grid span {
+            width: 8px;
+            height: 8px;
+            background-color: var(--color-success);
+            border-radius: 50%;
+            animation: flash 1.5s infinite;
+        }
+        .anim-3 .dot-grid span:nth-child(2) { animation-delay: 0.2s; }
+        .anim-3 .dot-grid span:nth-child(3) { animation-delay: 0.4s; }
+        .anim-3 .dot-grid span:nth-child(4) { animation-delay: 0.6s; }
+        .anim-3 .dot-grid span:nth-child(5) { animation-delay: 0.8s; }
+        .anim-3 .dot-grid span:nth-child(6) { animation-delay: 1.0s; }
+
+        @keyframes flash {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .anim-4 .typewriter {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--color-warning);
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid var(--color-warning);
+            animation: typing 2s steps(20) infinite, blink 0.75s step-end infinite;
+        }
+
+        .anim-5 .check {
+            font-size: 2rem;
+            color: var(--color-success);
+            animation: pop 1s infinite alternate;
+        }
+
+        @keyframes pop {
+            from { transform: scale(0.8); }
+            to { transform: scale(1.2); }
+        }
+
+        .anim-6 .arrow-move {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .anim-6 .arrow-move span {
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid var(--color-secondary);
+            border-right: 2px solid var(--color-secondary);
+            transform: rotate(45deg);
+            animation: moveRight 1.5s infinite;
+        }
+        .anim-6 .arrow-move span:nth-child(2) { animation-delay: 0.2s; }
+        .anim-6 .arrow-move span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes moveRight {
+            0% { opacity: 0; transform: translateX(-10px) rotate(45deg); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: translateX(10px) rotate(45deg); }
+        }
+
+        .framework-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-foreground);
+            margin: 0;
+        }
+
+        .framework-card p {
+            font-size: 0.875rem;
+            color: var(--color-muted-foreground);
+            margin: 0;
+        }
+
+        @media (min-width: 768px) {
+            .framework-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ============================================================
+           COLLABORATIONS (Marquee)
+           ============================================================ */
+        .collaborations {
+            padding: var(--section-spacing) 0;
+            border-bottom: 1px solid var(--color-border);
+            overflow: hidden;
+        }
+
+        .collaborations h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--color-foreground);
+            margin-bottom: 3rem;
+        }
+
+        .marquee-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 2rem;
+            width: max-content;
+            animation: marqueeScroll 20s linear infinite;
+        }
+
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .marquee-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem 3rem;
+            background-color: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--card-radius);
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-muted-foreground);
+            white-space: nowrap;
+            filter: grayscale(100%);
+            transition: filter var(--transition-standard), color var(--transition-standard);
+        }
+
+        .marquee-item:hover {
+            filter: grayscale(0%);
+            color: var(--color-foreground);
+        }
+
+        /* ============================================================
+           PROFESSIONAL EXPERIENCE (2x2)
+           ============================================================ */
+        .experience {
+            padding: var(--section-spacing) 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .experience-card {
+            border: 1px solid var(--color-border);
+            border-radius: var(--card-radius);
+            padding: 2rem;
+            background-color: var(--color-card);
+        }
+
+        .experience-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-header .nav-arrows {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            background-color: #ffffff;
+            color: #000000;
+            border-radius: 4px;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .experience-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-foreground);
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-card .meta {
+            font-size: 0.875rem;
+            color: var(--color-muted-foreground);
+            margin-bottom: 1.25rem;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.25rem 0.6rem;
+            font-size: 0.75rem;
+            background-color: #000000;
+            border: 1px solid var(--color-border);
+            border-radius: 9999px;
+            color: var(--color-muted-foreground);
+        }
+
+        .skill-tag svg {
+            width: 12px;
+            height: 12px;
+            color: var(--color-success);
+        }
+
+        @media (min-width: 768px) {
+            .experience-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ============================================================
+           EDUCATION (Similar ao Experience)
+           ============================================================ */
+        .education {
+            padding: var(--section-spacing) 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .education-card {
+            border: 1px solid var(--color-border);
+            border-radius: var(--card-radius);
+            padding: 2rem;
+            background-color: var(--color-card);
+        }
+
+        .education-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-header .nav-arrows {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            background-color: #ffffff;
+            color: #000000;
+            border-radius: 4px;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .education-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-foreground);
+            margin-bottom: 0.25rem;
+        }
+
+        .education-card .meta {
+            font-size: 0.875rem;
+            color: var(--color-muted-foreground);
+            margin-bottom: 1.25rem;
+        }
+
+        @media (min-width: 768px) {
+            .education-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ============================================================
+           CASE STUDIES (Integrados)
+           ============================================================ */
+        .case-studies {
+            padding: var(--section-spacing) 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .case-study-block {
+            margin-top: 3rem;
+            border-top: 1px solid var(--color-border);
+            padding-top: 3rem;
+        }
+
+        .case-study-block:first-of-type {
+            margin-top: 0;
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .case-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border-radius: 4px;
+            background-color: var(--color-muted);
+            color: var(--color-muted-foreground);
+            border: 1px solid var(--color-border);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .case-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .case-desc {
+            font-size: 1rem;
+            color: var(--color-muted-foreground);
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .response-box {
+            background-color: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--card-radius);
+            padding: 1.5rem;
+        }
+
+        .response-box h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+            color: var(--color-muted-foreground);
+        }
+
+        .response-box p {
+            font-size: 0.9375rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .response-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .rubric-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+            background-color: var(--color-card);
+            border-radius: var(--card-radius);
+            overflow: hidden;
+        }
+
+        .rubric-table th {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            background-color: var(--color-muted);
+            font-weight: 600;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .rubric-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--color-border);
+            vertical-align: top;
+        }
+
+        .rubric-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .score-badge {
+            display: inline-block;
+            padding: 0.125rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .score-high { background-color: rgba(34, 197, 94, 0.2); color: #4ade80; }
+        .score-mid { background-color: rgba(234, 179, 8, 0.2); color: #facc15; }
+        .score-low { background-color: rgba(239, 68, 68, 0.2); color: #f87171; }
+
+        .rationale-box {
+            background-color: var(--color-muted);
+            padding: 1.5rem;
+            border-radius: var(--card-radius);
+            border-left: 4px solid var(--color-secondary);
+            margin-top: 1.5rem;
+        }
+
+        .rationale-box h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .rationale-box p {
+            font-size: 0.9375rem;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .rationale-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ============================================================
+           FOOTER COM EFEITO MATRIX
+           ============================================================ */
+        .footer {
+            padding: 0;
+            border-top: 1px solid var(--color-border);
+            background-color: #000000;
+            color: var(--color-foreground);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .matrix-canvas {
+            width: 100%;
+            height: 120px;
+            display: block;
+        }
+
+        .footer-content {
+            padding: 2rem 1.5rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .footer-brand {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            color: var(--color-muted-foreground);
+            transition: color var(--transition-fast), border-color var(--transition-fast);
+        }
+
+        .footer-socials a:hover {
+            color: var(--color-foreground);
+            border-color: var(--color-foreground);
+        }
+
+        .footer-socials svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding-top: 1.5rem;
+            font-size: 0.75rem;
+            color: var(--color-muted-foreground);
+            line-height: 1.6;
+        }
+
+        .footer-bottom span {
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            .footer-top {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#hero" class="wordmark">Ariane Lesnyak</a>
+            
+            <nav class="nav-links">
+                <div class="nav-item" data-target="popup-capabilities">
+                    Capabilities
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="nav-item" data-target="popup-work">
+                    Selected Work
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="nav-item" data-target="popup-cases">
+                    Case Studies
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="nav-item" data-target="popup-framework">
+                    Framework
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+            </nav>
+
+            <a href="#contact" class="btn btn-primary nav-cta">Contact</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- POPUPS -->
+    <div class="nav-popup" id="popup-capabilities">
+        <div class="nav-popup-header">CAPABILITIES</div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <div class="text">
+                <h4>Accuracy & Factual Verification</h4>
+                <p>Scrutinizing factual claims, names, dates, units, and references. Distinguishing what is supported from what requires verification.</p>
+            </div>
+        </div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+            <div class="text">
+                <h4>Reasoning & Instruction Adherence</h4>
+                <p>Identifying fluent but incorrect responses. Detecting skipped steps, contradictions, and conclusions unsupported by reasoning.</p>
+            </div>
+        </div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div class="text">
+                <h4>Brazilian Portuguese Localization</h4>
+                <p>Sensitivity to PT-BR usage, register, tone, idiomatic expression, and cultural context.</p>
+            </div>
+        </div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <div class="text">
+                <h4>Evaluation & Written Justification</h4>
+                <p>Comparing responses against explicit criteria. Citing concrete evidence and writing concise rationales.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-popup" id="popup-work">
+        <div class="nav-popup-header">SELECTED WORK</div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+            <div class="text">
+                <h4>Portuguese Language Specialist - AI Trainer</h4>
+                <p>PROFESSIONAL WORK</p>
+            </div>
+        </div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <div class="text">
+                <h4>Localisation QA Engineer</h4>
+                <p>PROFESSIONAL WORK</p>
+            </div>
+        </div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            <div class="text">
+                <h4>Portuguese Language Expert</h4>
+                <p>INDEPENDENT STUDY</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-popup" id="popup-cases">
+        <div class="nav-popup-header">CASE STUDIES</div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+            <div class="text">
+                <h4>Two Fluent Answers. One Better Response.</h4>
+                <p>Comparative AI Response Evaluation</p>
+            </div>
+        </div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+            <div class="text">
+                <h4>When Correct Portuguese Is Not the Most Appropriate Portuguese</h4>
+                <p>Localization & Linguistic QA</p>
+            </div>
+        </div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <div class="text">
+                <h4>Structured Content, Decision Logic & Knowledge Workflows</h4>
+                <p>Transferable Experience</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-popup" id="popup-framework">
+        <div class="nav-popup-header">FRAMEWORK</div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+            <div class="text">
+                <h4>Understand the prompt and its constraints.</h4>
+                <p>Identify the core request and any limitations.</p>
+            </div>
+        </div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <div class="text">
+                <h4>Identify factual and logical claims.</h4>
+                <p>Separate verifiable facts from reasoning.</p>
+            </div>
+        </div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <div class="text">
+                <h4>Check whether the response addresses the actual task.</h4>
+                <p>Verify if the response answers the prompt.</p>
+            </div>
+        </div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            <div class="text">
+                <h4>Examine reasoning and supporting evidence.</h4>
+                <p>Evaluate the logic and evidence provided.</p>
+            </div>
+        </div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <div class="text">
+                <h4>Review language, terminology, and localization.</h4>
+                <p>Assess linguistic accuracy and contextual fit.</p>
+            </div>
+        </div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
+            <div class="text">
+                <h4>Compare alternatives against explicit criteria.</h4>
+                <p>Evaluate options using a clear rubric.</p>
+            </div>
+        </div>
+        <div class="popup-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+            <div class="text">
+                <h4>Write a concise rationale and flag uncertainty.</h4>
+                <p>Provide clear justification for the evaluation.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-geo"></div>
+        <div class="container">
+            <div class="hero-badge-wrapper">
+                <span class="hero-badge">
+                    Portuguese AI Response Evaluation
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+            </div>
+            <h1>Good answers need more than fluent language.</h1>
+            <p>I bring linguistic judgment, localization experience, and structured quality review to the evaluation of AI-generated responses — examining accuracy, reasoning, clarity, instruction adherence, and Brazilian Portuguese usage.</p>
+            <div class="hero-ctas">
+                <a href="#work" class="btn btn-primary">Explore selected work</a>
+                <a href="#experience" class="btn btn-outline">View experience</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAPABILITIES (4 Colunas, Tabela) -->
+    <section class="capabilities" id="capabilities">
+        <div class="container">
+            <div class="capabilities-header">
+                <div class="nav-arrows">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+            </div>
+            <div class="capabilities-table">
+                <div class="capability-cell">
+                    <h3>Accuracy & Factual Verification</h3>
+                    <p>Scrutinizing factual claims, names, dates, units, and references. Distinguishing what is supported from what requires verification.</p>
+                </div>
+                <div class="capability-cell">
+                    <h3>Reasoning & Instruction Adherence</h3>
+                    <p>Identifying fluent but incorrect responses. Detecting skipped steps, contradictions, and conclusions unsupported by reasoning.</p>
+                </div>
+                <div class="capability-cell">
+                    <h3>Brazilian Portuguese Localization</h3>
+                    <p>Sensitivity to PT-BR usage, register, tone, idiomatic expression, and cultural context.</p>
+                </div>
+                <div class="capability-cell">
+                    <h3>Evaluation & Written Justification</h3>
+                    <p>Comparing responses against explicit criteria. Citing concrete evidence and writing concise rationales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKING PRINCIPLES (Tabela 2x2) -->
+    <section class="principles" id="principles">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 1rem;">
+                <span class="badge-outline">WORKING PRINCIPLES</span>
+            </div>
+            <h2 class="section-title">Working Principles</h2>
+            <p class="section-subtitle">Bringing language, context, quality review, and structured problem-solving together.</p>
+            
+            <div class="principles-grid">
+                <div class="principle-cell">
+                    <div class="principle-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                        Principle 01
+                    </div>
+                    <h4>Evidence before intuition</h4>
+                    <p>Judgments are grounded in explicit criteria and specific evidence from the text, not just a "feeling" about fluency.</p>
+                    <div class="principle-visual">
+                        <div class="anim-dot"></div>
+                    </div>
+                </div>
+                <div class="principle-cell">
+                    <div class="principle-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        Principle 02
+                    </div>
+                    <h4>Context before literalism</h4>
+                    <p>Language quality is contextual. A grammatically correct version may be unsuitable for the intended audience or tone.</p>
+                    <div class="principle-visual">
+                        <div class="anim-line"></div>
+                    </div>
+                </div>
+                <div class="principle-cell">
+                    <div class="principle-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                        Principle 03
+                    </div>
+                    <h4>Consistency without ignoring nuance</h4>
+                    <p>Maintaining terminology and style consistency while recognizing when a nuanced exception is appropriate.</p>
+                    <div class="principle-visual">
+                        <div class="anim-type">consistent.nuance</div>
+                    </div>
+                </div>
+                <div class="principle-cell">
+                    <div class="principle-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        Principle 04
+                    </div>
+                    <h4>Clear rationales, not unexplained scores</h4>
+                    <p>Every evaluation includes a concise written justification explaining the reasoning behind the score.</p>
+                    <div class="principle-visual">
+                        <div class="anim-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW I EVALUATE A RESPONSE (6 Blocos) -->
+    <section class="framework" id="framework">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 1rem;">
+                <span class="badge-outline">FRAMEWORK</span>
+            </div>
+            <h2 class="section-title">How I Evaluate a Response</h2>
+            <p class="section-subtitle">A transparent, evidence-based process for assessing AI-generated text.</p>
+            
+            <div class="framework-grid">
+                <div class="framework-card">
+                    <div class="framework-animation anim-1">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <h4>Understand the prompt and its constraints.</h4>
+                    <p>Identify the core request and any limitations.</p>
+                </div>
+                <div class="framework-card">
+                    <div class="framework-animation anim-2">
+                        <div class="circle"></div>
+                    </div>
+                    <h4>Identify factual and logical claims.</h4>
+                    <p>Separate verifiable facts from reasoning.</p>
+                </div>
+                <div class="framework-card">
+                    <div class="framework-animation anim-3">
+                        <div class="dot-grid">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <h4>Check whether the response addresses the actual task.</h4>
+                    <p>Verify if the response answers the prompt.</p>
+                </div>
+                <div class="framework-card">
+                    <div class="framework-animation anim-4">
+                        <div class="typewriter">evaluate.reasoning</div>
+                    </div>
+                    <h4>Examine reasoning and supporting evidence.</h4>
+                    <p>Evaluate the logic and evidence provided.</p>
+                </div>
+                <div class="framework-card">
+                    <div class="framework-animation anim-5">
+                        <div class="check">✓</div>
+                    </div>
+                    <h4>Review language, terminology, and localization.</h4>
+                    <p>Assess linguistic accuracy and contextual fit.</p>
+                </div>
+                <div class="framework-card">
+                    <div class="framework-animation anim-6">
+                        <div class="arrow-move">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <h4>Compare alternatives against explicit criteria.</h4>
+                    <p>Evaluate options using a clear rubric.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLLABORATIONS -->
+    <section class="collaborations" id="collaborations">
+        <div class="container">
+            <h2>Collaboration with leading institutions and companies</h2>
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <div class="marquee-item">Acclaro</div>
+                    <div class="marquee-item">Claro</div>
+                    <div class="marquee-item">ITC Global</div>
+                    <div class="marquee-item">iYUNO</div>
+                    <div class="marquee-item">Moshi Media</div>
+                    <div class="marquee-item">Saga</div>
+                    <div class="marquee-item">Tabuleiro Filmes</div>
+                    <div class="marquee-item">Tikinet</div>
+                    <div class="marquee-item">TW</div>
+                    <div class="marquee-item">VSI Vox Mundi</div>
+                    <!-- Duplicados para loop contínuo -->
+                    <div class="marquee-item">Acclaro</div>
+                    <div class="marquee-item">Claro</div>
+                    <div class="marquee-item">ITC Global</div>
+                    <div class="marquee-item">iYUNO</div>
+                    <div class="marquee-item">Moshi Media</div>
+                    <div class="marquee-item">Saga</div>
+                    <div class="marquee-item">Tabuleiro Filmes</div>
+                    <div class="marquee-item">Tikinet</div>
+                    <div class="marquee-item">TW</div>
+                    <div class="marquee-item">VSI Vox Mundi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE (2x2) -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title" style="text-align: left;">Professional Experience</h2>
+            <p class="section-subtitle" style="text-align: left; margin-left: 0;">A track record of linguistic quality, structured content, and quality-oriented workflows.</p>
+            
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Audiovisual Translation & Localization</h3>
+                        <div class="nav-arrows">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="meta">10+ Years Experience</div>
+                    <div class="skills-tags">
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Subtitling</span>
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Linguistic QC</span>
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Translation Workflows</span>
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Contextual Suitability</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Linguistic QA & Quality Control</h3>
+                        <div class="nav-arrows">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="meta">Quality & Standards</div>
+                    <div class="skills-tags">
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Accuracy Review</span>
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Consistency</span>
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Terminology</span>
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> MTPE Review</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Editorial & Knowledge Workflows</h3>
+                        <div class="nav-arrows">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="meta">Structured Content</div>
+                    <div class="skills-tags">
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Decision Trees</span>
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Content Migration</span>
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Terminology Management</span>
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Consistency</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Project Coordination</h3>
+                        <div class="nav-arrows">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="meta">Cross-Functional Work</div>
+                    <div class="skills-tags">
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Linguist Assignment</span>
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Tracking</span>
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Quality Processes</span>
+                        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Timely Delivery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title" style="text-align: left;">Education & Languages</h2>
+            <p class="section-subtitle" style="text-align: left; margin-left: 0;">Formal training in linguistics and applied language studies.</p>
+            
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>University of São Paulo (USP)</h3>
+                        <div class="nav-arrows">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="meta">Bachelor's degree and Teaching Licensure</div>
+                    <p style="font-size: 0.875rem; color: var(--color-muted-foreground);">Portuguese and English Languages and Literatures.</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>PUC-SP</h3>
+                        <div class="nav-arrows">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="meta">Libras Training</div>
+                    <p style="font-size: 0.875rem; color: var(--color-muted-foreground);">Course details and dates available upon request.</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>Languages</h3>
+                        <div class="nav-arrows">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="meta">Proficiency Levels</div>
+                    <ul style="list-style: disc; padding-left: 1.5rem; font-size: 0.875rem; color: var(--color-muted-foreground); line-height: 1.8;">
+                        <li>Brazilian Portuguese: Native</li>
+                        <li>English: C1–C2 Proficiency</li>
+                        <li>French: Advanced working/study proficiency</li>
+                        <li>Spanish: Intermediate proficiency</li>
+                        <li>Libras: Training completed</li>
+                    </ul>
+                </div>
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>Professional Training</h3>
+                        <div class="nav-arrows">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="meta">Audiovisual Translation & QA</div>
+                    <p style="font-size: 0.875rem; color: var(--color-muted-foreground);">Relevant training in audiovisual translation, subtitling, localization, and QA (completion details available upon request).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="case-studies" id="case-studies">
+        <div class="container">
+            <h2 class="section-title" style="text-align: left;">Case Studies</h2>
+            <p class="section-subtitle" style="text-align: left; margin-left: 0;">Evidence of linguistic rigor, structured analysis, and quality-oriented workflows.</p>
+
+            <!-- CASE 1 -->
+            <div class="case-study-block" id="case-study-1">
+                <span class="case-tag">Independent Portfolio Demonstration</span>
+                <h3 class="case-title">Two Fluent Answers. One Better Response.</h3>
+                <p class="case-desc">A demonstration of a repeatable process for evaluating AI-generated responses, rather than relying on fluency alone.</p>
+
+                <div class="comparison-grid">
+                    <div class="response-box" style="grid-column: 1 / -1; background-color: var(--color-muted); border-left: 4px solid var(--color-secondary);">
+                        <h4>User Prompt</h4>
+                        <p>"Explain the difference between 'por que', 'porque', 'por quê', and 'porquê' in Brazilian Portuguese, with examples."</p>
+                    </div>
+                    <div class="response-box">
+                        <h4>Response A</h4>
+                        <p>In Portuguese, these words are often confusing. "Por que" is used in questions, like "Por que você fez isso?". "Porque" is used for answers, like "Porque eu quis". "Por quê" is used at the end of sentences, like "Você fez isso por quê?". "Porquê" is a noun, like "O porquê da questão".</p>
+                    </div>
+                    <div class="response-box">
+                        <h4>Response B</h4>
+                        <p>"Por que" (two words, no accent) is used at the beginning or middle of a question, meaning "why" or "for what reason." Example: "Por que você está triste?"</p>
+                        <p>"Porque" (one word, no accent) is a conjunction meaning "because." Example: "Estou triste porque choveu."</p>
+                        <p>"Por quê" (two words, with circumflex) is used at the end of a sentence or before a pause, also meaning "why." Example: "Você está triste por quê?"</p>
+                        <p>"Porquê" (one word, with circumflex) is a noun meaning "the reason." Example: "Não entendi o porquê da sua tristeza."</p>
+                    </div>
+                </div>
+
+                <table class="rubric-table">
+                    <thead>
+                        <tr>
+                            <th>Criterion</th>
+                            <th>Response A</th>
+                            <th>Response B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Accuracy</strong></td>
+                            <td><span class="score-badge score-high">3/4</span> Mostly correct but lacks nuance.</td>
+                            <td><span class="score-badge score-high">4/4</span> Accurate and complete.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reasoning</strong></td>
+                            <td><span class="score-badge score-mid">2/4</span> Provides examples but doesn't fully explain the logic.</td>
+                            <td><span class="score-badge score-high">4/4</span> Clearly explains grammatical rules with examples.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Instruction Adherence</strong></td>
+                            <td><span class="score-badge score-mid">2/4</span> Answers the prompt but lacks structure.</td>
+                            <td><span class="score-badge score-high">4/4</span> Directly addresses each term systematically.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Clarity & Consistency</strong></td>
+                            <td><span class="score-badge score-mid">2/4</span> Compact but slightly confusing.</td>
+                            <td><span class="score-badge score-high">4/4</span> Clear, well-structured, and consistent.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rationale-box">
+                    <h4>Written Rationale</h4>
+                    <p><strong>Response B is preferable.</strong> While both responses are grammatically fluent in Portuguese, Response B provides a more complete and systematic explanation of the four terms. It clearly defines each usage, provides accurate examples, and maintains a consistent structure that makes the explanation easier to follow. Response A is correct in its examples but lacks the explanatory depth and structure needed for a user who is genuinely confused by these terms.</p>
+                    <p><strong>Confidence:</strong> High. The evaluation is based on explicit criteria (accuracy, reasoning, instruction adherence, clarity) and cites specific evidence from the responses.</p>
+                </div>
+            </div>
+
+            <!-- CASE 2 -->
+            <div class="case-study-block" id="case-study-2">
+                <span class="case-tag">Independent Portfolio Demonstration</span>
+                <h3 class="case-title">When Correct Portuguese Is Not the Most Appropriate Portuguese</h3>
+                <p class="case-desc">Demonstrating that language quality is contextual: a version may be grammatically acceptable yet unsuitable for the intended audience, tone, or task.</p>
+
+                <div class="comparison-grid">
+                    <div class="response-box" style="grid-column: 1 / -1; background-color: var(--color-muted); border-left: 4px solid var(--color-secondary);">
+                        <h4>Source Context</h4>
+                        <p>"Our app is designed to help you manage your tasks efficiently. Please click the button below to get started."</p>
+                        <p><strong>Target Audience:</strong> Brazilian young professionals using a productivity app.</p>
+                        <p><strong>Desired Tone:</strong> Direct, modern, and friendly.</p>
+                    </div>
+                    <div class="response-box">
+                        <h4>Option 1 (Literal)</h4>
+                        <p>"Nosso aplicativo foi projetado para ajudá-lo a gerenciar suas tarefas com eficiência. Por favor, clique no botão abaixo para começar."</p>
+                    </div>
+                    <div class="response-box">
+                        <h4>Option 2 (Contextual)</h4>
+                        <p>"Nosso app foi feito para te ajudar a organizar suas tarefas sem complicação. Bora começar? É só clicar no botão abaixo."</p>
+                    </div>
+                </div>
+
+                <div class="rationale-box">
+                    <h4>Rationale for Preference</h4>
+                    <p><strong>Option 2 is preferable.</strong> While Option 1 is grammatically correct and accurate, it sounds overly formal and bureaucratic for the target audience. Option 2 uses more natural, conversational Brazilian Portuguese ("app" instead of "aplicativo", "te ajudar" instead of "ajudá-lo", "bora começar" as a friendly call to action). This aligns better with the modern, user-friendly tone of a productivity app aimed at young professionals.</p>
+                    <p><strong>Note:</strong> Option 1 might be preferable in a formal, legal, or corporate context where neutrality and precision are paramount.</p>
+                </div>
+            </div>
+
+            <!-- CASE 3 -->
+            <div class="case-study-block" id="case-study-3">
+                <span class="case-tag">Transferable Experience</span>
+                <h3 class="case-title">Structured Content, Decision Logic & Knowledge Workflows</h3>
+                <p class="case-desc">How structured content and decision logic relate to evaluating AI responses.</p>
+
+                <div class="response-box" style="background-color: var(--color-card); border: 1px solid var(--color-border);">
+                    <h4>Context & Transferable Skills</h4>
+                    <p style="margin-bottom: 1.5rem;">Experience with large-scale content migration, decision-tree-guided articles, and editorial processes. This background is directly transferable to AI evaluation:</p>
+                    <ul style="list-style: disc; padding-left: 1.5rem; font-size: 0.9375rem; color: var(--color-muted-foreground); line-height: 1.8;">
+                        <li><strong>Decision Paths:</strong> Does the AI response follow the logical decision path implied by the question?</li>
+                        <li><strong>Missing Conditions:</strong> Are key conditions or constraints from the prompt missing in the response?</li>
+                        <li><strong>Terminology Consistency:</strong> Is the terminology used consistent with the domain and the prompt?</li>
+                        <li><strong>Supported Conclusions:</strong> Is the conclusion supported by the information available in the response?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER COM MATRIX -->
+    <footer class="footer" id="contact">
+        <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">ARIANE LESNYAK</div>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com/in/arianelesnyak" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="mailto:ariane.etimo@gmail.com" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </a>
+                    <a href="#" aria-label="Download CV">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>Language expertise. Evidence-based evaluation. Better AI responses.</span>
+                <span>Independent portfolio demonstration. Not a client deliverable.</span>
+                <span>Inspired by OpenTrain AI © 2026 All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ============================================================
+            // NAVBAR POPUPS
+            // ============================================================
+            const navItems = document.querySelectorAll('.nav-item');
+            const popups = document.querySelectorAll('.nav-popup');
+            let activePopup = null;
+
+            navItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    const targetId = item.dataset.target;
+                    const targetPopup = document.getElementById(targetId);
+                    
+                    if (activePopup && activePopup !== targetPopup) {
+                        activePopup.classList.remove('active');
+                    }
+                    
+                    if (targetPopup) {
+                        targetPopup.classList.add('active');
+                        activePopup = targetPopup;
+                    }
+                });
+            });
+
+            // Close popup when mouse leaves the nav item and popup area
+            document.querySelector('.navbar').addEventListener('mouseleave', (e) => {
+                // Small delay to allow moving to popup
+                setTimeout(() => {
+                    if (activePopup && !activePopup.matches(':hover') && !e.relatedTarget?.closest('.nav-item')) {
+                        activePopup.classList.remove('active');
+                        activePopup = null;
+                    }
+                }, 100);
+            });
+
+            popups.forEach(popup => {
+                popup.addEventListener('mouseleave', () => {
+                    popup.classList.remove('active');
+                    activePopup = null;
+                });
+            });
+
+            // Close popups on click outside
+            document.addEventListener('click', (e) => {
+                if (activePopup && !e.target.closest('.nav-item') && !e.target.closest('.nav-popup')) {
+                    activePopup.classList.remove('active');
+                    activePopup = null;
+                }
+            });
+
+            // ============================================================
+            // MATRIX EFFECT NO FOOTER
+            // ============================================================
+            const canvas = document.getElementById('matrixCanvas');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                
+                const resizeCanvas = () => {
+                    canvas.width = window.innerWidth;
+                    canvas.height = 120;
+                };
+                resizeCanvas();
+                window.addEventListener('resize', resizeCanvas);
+
+                const keywords = [
+                    'ACCURACY', 'REASONING', 'LOCALIZATION', 'EVALUATION',
+                    'PORTUGUESE', 'EVIDENCE', 'CONTEXT', 'QUALITY',
+                    'JUSTIFICATION', 'INSTRUCTION', 'ADHERENCE', 'FLUENCY',
+                    'COHERENCE', 'TERMINOLOGY', 'CULTURE', 'NUANCE',
+                    'VERIFICATION', 'FACTUAL', 'LOGIC', 'CLARITY'
+                ];
+                
+                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*';
+                const fontSize = 14;
+                const columns = Math.floor(canvas.width / fontSize);
+                const drops = [];
+                for (let i = 0; i < columns; i++) {
+                    drops[i] = Math.random() * -100;
+                }
+
+                // Assign a random keyword to each column to form words occasionally
+                const columnKeywords = [];
+                for (let i = 0; i < columns; i++) {
+                    columnKeywords[i] = keywords[Math.floor(Math.random() * keywords.length)];
+                }
+
+                let frameCount = 0;
+                
+                const drawMatrix = () => {
+                    // Fade effect
+                    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                    ctx.fillStyle = '#ffffff';
+                    ctx.font = fontSize + 'px monospace';
+
+                    for (let i = 0; i < drops.length; i++) {
+                        frameCount++;
+                        
+                        // Occasionally show a keyword letter instead of random char
+                        let text;
+                        if (frameCount % 60 < 30) {
+                            // Show keyword letters
+                            const word = columnKeywords[i];
+                            const charIndex = Math.floor(drops[i]) % word.length;
+                            if (charIndex >= 0 && charIndex < word.length) {
+                                text = word[charIndex];
+                            } else {
+                                text = chars[Math.floor(Math.random() * chars.length)];
+                            }
+                        } else {
+                            text = chars[Math.floor(Math.random() * chars.length)];
+                        }
+
+                        const x = i * fontSize;
+                        const y = drops[i] * fontSize;
+
+                        // Add a glow effect occasionally
+                        if (Math.random() > 0.98) {
+                            ctx.fillStyle = '#4ade80';
+                        } else {
+                            ctx.fillStyle = 'rgba(255, 255, 255, ' + (Math.random() * 0.5 + 0.3) + ')';
+                        }
+                        
+                        ctx.fillText(text, x, y);
+
+                        // Reset drop
+                        if (y > canvas.height && Math.random() > 0.975) {
+                            drops[i] = 0;
+                            // Change keyword occasionally
+                            if (Math.random() > 0.7) {
+                                columnKeywords[i] = keywords[Math.floor(Math.random() * keywords.length)];
+                            }
+                        }
+                        drops[i] += 0.8;
+                    }
+                };
+
+                setInterval(drawMatrix, 50);
+            }
+        });
+    </script>
+</body>
+</html>

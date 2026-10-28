@@ -854,7 +854,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 1.5rem 3rem;
+            padding: 1rem 2rem;
+            min-height: 80px;
             background-color: var(--color-card);
             border: 1px solid var(--color-border);
             border-radius: var(--card-radius);
@@ -871,7 +872,20 @@
             filter: grayscale(0%);
             color: var(--color-foreground);
         }
+.marquee-item img {
+    height: 40px;          
+    width: auto;          
+    max-width: 120px;      
+    object-fit: contain;   
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all var(--transition-standard);
+}
 
+.marquee-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
         /* ============================================================
            PROFESSIONAL EXPERIENCE (2x2)
            ============================================================ */
@@ -1607,7 +1621,7 @@
             <h2>Collaboration with leading institutions and companies</h2>
             <div class="marquee-container">
                 <div class="marquee-track">
-                    <div class="marquee-item"><img src="https://github.com/alc-etimo/opentrainAI/blob/main/acclaro-logo.webp?raw=true" style="height: 50%; width: 50%;"/></div>
+                    <div class="marquee-item"><img src="https://github.com/alc-etimo/opentrainAI/blob/main/acclaro-logo.webp?raw=true" alt="Acclaro"/></div>
                     <div class="marquee-item">Claro</div>
                     <div class="marquee-item">ITC Global</div>
                     <div class="marquee-item">iYUNO</div>
@@ -1618,7 +1632,7 @@
                     <div class="marquee-item">TW</div>
                     <div class="marquee-item">VSI Vox Mundi</div>
                     <!-- Duplicados para loop contínuo -->
-                    <div class="marquee-item"><img src="https://github.com/alc-etimo/opentrainAI/blob/main/acclaro-logo.webp?raw=true" style="height: 50%; width: 50%;"/></div>
+                    <div class="marquee-item"><img src="https://github.com/alc-etimo/opentrainAI/blob/main/acclaro-logo.webp?raw=true" alt="Acclaro"/></div>
                     <div class="marquee-item">Claro</div>
                     <div class="marquee-item">ITC Global</div>
                     <div class="marquee-item">iYUNO</div>
